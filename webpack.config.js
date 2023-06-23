@@ -12,13 +12,13 @@ const config = {
     filename: 'bundle.js', // name of file being emitted
     assetModuleFilename: '[name][ext]' //allows images to keep file names
   },
+  devtool: 'source-map',
   devServer: {
     static: {
         directory: path.resolve(__dirname, 'dist'),
     },
     port: 3000,
     open: true,
-    clean: true,
 },
   module: {
     rules: [
@@ -56,8 +56,9 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      templateContent: ({ htmlWebpackPlugin }) => '<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>' + htmlWebpackPlugin.options.title + '</title></head><body><div id=\"app\"></div></body></html>',
+      title: 'Olivias App',
       filename: 'index.html',
+      template: './src/template.html'
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
