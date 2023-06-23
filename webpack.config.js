@@ -12,14 +12,6 @@ const config = {
     filename: 'bundle.js', // name of file being emitted
     assetModuleFilename: '[name][ext]' //allows images to keep file names
   },
-  devtool: 'source-map',
-  devServer: {
-    static: {
-        directory: path.resolve(__dirname, 'dist'),
-    },
-    port: 3000,
-    open: true,
-},
   module: {
     rules: [
       {
@@ -59,10 +51,6 @@ const config = {
       title: 'Olivias App',
       filename: 'index.html',
       template: './src/template.html'
-    }),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      openAnalyzer: false,
     }),
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin() //cleans up build folder
