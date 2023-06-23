@@ -8,8 +8,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const config = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'dist'), // path to directory where emitting bundles
+    filename: 'bundle.js', // name of file being emitted
+    assetModuleFilename: '[name][ext]' //allows images to keep file names
   },
   devServer: {
     static: {
@@ -17,6 +18,7 @@ const config = {
     },
     port: 3000,
     open: true,
+    clean: true,
 },
   module: {
     rules: [
@@ -62,7 +64,7 @@ const config = {
       openAnalyzer: false,
     }),
     new MiniCssExtractPlugin(),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin() //cleans up build folder
   ]
 };
 
