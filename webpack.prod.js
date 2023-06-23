@@ -12,6 +12,11 @@ const { merge } = require("webpack-merge");
 
 const config = merge(common, {
     mode: 'production',
+    output: {
+        filename: "[name].[contenthash].bundle.js",
+        path: path.resolve(__dirname, "dist"),
+        assetModuleFilename: '[name][ext]' //allows images to keep file names
+      },
     //optimization most important in prod mode
     optimization: {
         minimizer: [
@@ -29,11 +34,6 @@ const config = merge(common, {
         })
         ]
     },
-//   output: {
-//     path: path.resolve(__dirname, 'dist'), // path to directory where emitting bundles
-//     filename: 'bundle.js', // name of file being emitted
-//     assetModuleFilename: '[name][ext]' //allows images to keep file names
-//   },
 //   module: {
 //     rules: [
 //       {

@@ -6,6 +6,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = merge(common, {
   mode: 'development',
+  output: {
+    path: path.resolve(__dirname, 'dist'), // path to directory where emitting bundles
+    filename: '[name].bundle.js', // name of file being emitted
+    assetModuleFilename: '[name][ext]' //allows images to keep file names
+  },
   devtool: 'source-map',
   devServer: {
     static: {
