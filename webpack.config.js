@@ -1,17 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const config = {
   entry: './src/index.js',
-//   output: {
-//     path: path.resolve(__dirname, 'dist'), // path to directory where emitting bundles
-//     filename: 'bundle.js', // name of file being emitted
-//     assetModuleFilename: '[name][ext]' //allows images to keep file names
-//   },
   module: {
     rules: [
       {
