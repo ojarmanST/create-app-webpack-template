@@ -7,7 +7,8 @@
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack serve --mode development",
     "build-prod": "webpack --mode production",
-    "dev-test": "webpack-dev-server  --config webpack.dev.js --open"
+    "dev-test": "webpack-dev-server  --config webpack.dev.js --open",
+    "prod-test": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -37,7 +38,10 @@
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
+    "css-minimizer-webpack-plugin": "^5.0.1",
     "fontsource-roboto": "^4.0.0",
+    "i": "^0.3.7",
+    "npm": "^9.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "webpack-dev-server": "^4.15.1"

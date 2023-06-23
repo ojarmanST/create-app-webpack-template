@@ -1,11 +1,8 @@
-const webpack = require('webpack');
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const common =require('./webpack.config')
 const { merge } = require('webpack-merge')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = merge(common, {
   mode: 'development',
@@ -20,8 +17,13 @@ const config = merge(common, {
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      openAnalyzer: true,
+      openAnalyzer: false,
     }),
+    new HtmlWebpackPlugin({
+        template: "./src/template.html",
+        title: 'Dev Mode Title',
+        filename: 'index.html',
+      })
   ]
 });
 

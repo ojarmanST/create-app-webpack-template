@@ -47,11 +47,6 @@ const config = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Olivias App',
-      filename: 'index.html',
-      template: './src/template.html'
-    }),
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin() //cleans up build folder
   ]
