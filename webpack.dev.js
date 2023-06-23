@@ -11,7 +11,8 @@ const config = merge(common, {
     filename: '[name].bundle.js', // name of file being emitted
     assetModuleFilename: '[name][ext]' //allows images to keep file names
   },
-  devtool: 'source-map',
+  devtool: 'source-map', //helpful for debugging
+  //server configuration for dev mode
   devServer: {
     static: {
         directory: path.resolve(__dirname, 'dist'),
@@ -22,7 +23,7 @@ const config = merge(common, {
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      openAnalyzer: false,
+      openAnalyzer: true,
     }),
     new HtmlWebpackPlugin({
         template: "./src/template.html",

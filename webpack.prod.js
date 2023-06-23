@@ -19,7 +19,7 @@ const config = merge(common, {
         new CssMinimizerPlugin(),
         new TerserPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Title of App',
+            title: 'Prod Mode Title',
             template: "./src/template.html", // must have boilerplate file of this name in src folder for the plugin to reference
             filename: 'index.html',
             minify: {

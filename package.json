@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm dist/bundle.js",
-    "build-dev": "webpack serve --mode development",
-    "build-prod": "webpack --mode production",
-    "dev-test": "webpack-dev-server  --config webpack.dev.js --open",
-    "prod-test": "webpack --config webpack.prod.js"
+    "build-dev": "webpack serve --config webpack.dev.js --open",
+    "build-prod": "webpack serve --config webpack.prod.js  --open"
   },
   "keywords": [],
   "author": "",
