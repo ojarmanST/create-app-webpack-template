@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack serve --config webpack.dev.js --open",
-    "build-prod": "webpack serve --config webpack.prod.js  --open"
+    "build-prod": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",

@@ -23,7 +23,7 @@ const config = merge(common, {
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      openAnalyzer: true,
+      openAnalyzer: false,
     }),
     new HtmlWebpackPlugin({
         template: "./src/template.html",

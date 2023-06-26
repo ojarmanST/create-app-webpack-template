@@ -19,6 +19,7 @@ class App extends React.Component {
 
         {/* testing image file types */}
         <img src={oliviaProfile} width="100"/>
+        
         {/* file too large in bundle? find how to lazyload? */}
         <img src={inks} width="100" loading="lazy"/>
       </>
